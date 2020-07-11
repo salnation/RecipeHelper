@@ -51,12 +51,7 @@ $("#searchBtn").click(function () {
                 var li = $("<li>").text(element);
                 newUL.append(li);
             });
-            var cautions = element.recipe.cautions.toString();
-            if (cautions) {
-                cautions = $("<div>").text("Cautions: " + cautions);
-                cautions.addClass("text-center text-danger");
-                newCol.append(cautions);
-            }
+            
             //Column 3 (ingredients)
             var newCol = $("<div>");
             newCol.addClass("col");
@@ -71,4 +66,38 @@ $("#searchBtn").click(function () {
             container.append("<hr>");
         });
     });
+});
+
+
+/*Food Database API*/
+var appId_FDA = "e76a4cac";
+var appKey_FDA = "f2a93999d9e4e21df74a6f5e268443c1";
+var foodData = "";
+var queryUrl = "https://api.edamam.com/api/nutrition-data?app_id=$" + appId_FDA + "&app_key=$" + "&ingr=" + foodData;
+var settings = {
+	"url": queryUrl,
+	"method": "GET"
+};
+
+console.log(settings.url);
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+    var container = $(".container");
+    $("#welcome").empty();
+    container.empty();
+    var resultsTitle = $("<h1>");
+    resultsTitle.text("Food Database. Showing Results for: " + foodData)
+    resultsTitle.addClass("text-center");
+    $("#welcome").append(resultsTitle);
+    var refreshLink = $("<a>");
+    refreshLink.attr("href", "index.html").text("Click here to do another search");
+    refreshLink.addClass("text-center");
+    $("#welcome").append(refreshLink);
+    var objHits = response.hits;
+    objHits.forEach(element => { //Recipe Title (Row)
+        var h1 = $("<h3>").text(element.recipe.label);
+        h1.addClass("text-center");
+        container.append(h1);
+    })
 });
