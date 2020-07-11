@@ -20,7 +20,29 @@ p{
     width: 60%;
   }
 
-  
+  /* Horizontal and vertical alignment */
+.centerXY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:hoover {
+    font-weight: bolder;
+  }
+
+  #gitHubRepo {
+    position: fixed;
+    left:0;
+    bottom:40px;
+    margin-left: 10px;
+  }
+
+  #edamam-badge {
+    position: fixed;
+    left:0;
+    bottom:0;
+  } 
 
 
 

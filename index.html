@@ -12,31 +12,38 @@
 
 <body>
     <header id="welcome" class="jumbotron">
-        
         <h1 class="display-3">Recipe Helper</h1>
-        <p class="lead">Welcome to Recipe Helper! An application that will transform your daily meals and create a stress free cooking experience. Simply add in what you're craving and our smart food genertator will provide you with delicious recipes. Try out our Recipe Helper below! </p>
-        <div class="form-group">
-            <label for="recipeSearch">Recipe search</label>
-            <input id="recipeSearch" type="text" class="form-control">
-        </div>
-
-        <h1 class="display-3"></h1>
-        <div class="form-group">
-            <h3>Search for Nutritional Information</h3>
-            <label for="foodSearch">Enter Food:</label>
-            <input id="foodSearch" type="text" class="form-control">
-        </div>
-
-
-        <button id="searchBtn" type="button" class="btn btn-primary">OK</button>
+        <p class="lead">Welcome to Recipe Helper! An application that will transform your daily meals and create a
+            stress free cooking experience. Simply add in what you're craving and our smart food genertator will provide
+            you with delicious recipes. Try out our Recipe Helper below! </p>
+        <form>
+            <div class="form-row centerXY">
+                <div class="form-group col-md-4 mt-1">
+                    <label for="searchInput">Recipe/Food Search</label>
+                    <input type="text" class="form-control" id="searchInput">
+                </div>
+                <div class="custom-control custom-radio ml-3">
+                    <input type="radio" class="custom-control-input" id="recipeSearchRadio" name="radioButtons" checked>
+                    <label class="custom-control-label" for="recipeSearchRadio">Recipe Search</label>
+                </div>
+                <div class="custom-control custom-radio ml-3">
+                    <input type="radio" class="custom-control-input" id="foodInfoSearchRadio" name="radioButtons">
+                    <label class="custom-control-label" for="foodInfoSearchRadio">Food Search</label>
+                </div>
+                <button id="searchBtn" type="button" class="btn btn-primary ml-3">OK</button>
+            </div>
+        </form>
     </header>
-    <img src="genericfoodcovernew.jpg" alt="foodpic" class="center">
+    <img id="welcomeImg" src="genericfoodcovernew.jpg" alt="Lots of different dishes" class="center">
     <main class="container">
     </main>
-    
+    <footer>
+        <a id="gitHubRepo" href="https://github.com/salnation/RecipeHelper">Github Repository</a>
+        <div id="edamam-badge" data-color="transparent"></div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
     <script src="script.js">
-
     </script>
 </body>
 
