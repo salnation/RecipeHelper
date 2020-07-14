@@ -3,6 +3,7 @@ h1{
     font-style: bold;
     text-align: center;
     background-color: rgb(58, 185, 147);
+    
 }
 
 p{
@@ -19,6 +20,56 @@ p{
     margin-right: auto;
     width: 60%;
   }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(127, 201, 176);
+    width: 32%;
+    text-align: center;
+    }
+
+    input[type=text] {
+        background-color: #d3bdbd;
+        color: white;
+        width: 20%;
+        margin: 10px 0;
+        border: 1px solid #555;
+       
+    }
+
+       
+
+
+
+    
+
+    
+
+   
+    
+
+    
+
+      
+
+      
+
+
+     
+
+     
+
+
+   
+
+         
+        
+
+        
+
+
+
+  
 
   
 
